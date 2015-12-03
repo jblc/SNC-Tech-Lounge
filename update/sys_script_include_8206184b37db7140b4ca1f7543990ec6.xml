@@ -63,7 +63,7 @@ TechLoungeHelper.prototype = Object.extendsObject(AbstractAjaxProcessor, {
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>brad.campbell</sys_created_by>
         <sys_created_on>2015-04-12 20:00:10</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>8206184b37db7140b4ca1f7543990ec6</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>TechLoungeHelper</sys_name>

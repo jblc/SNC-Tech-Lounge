@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<record_update node_type="content_page" unload_date="2015-12-03 17:31:39">
+<record_update node_type="content_page" unload_date="2015-12-03 17:50:16">
     <sys_portal action="delete_multiple" query="page=6a6fdf3937750a00b4ca1f7543990e53">
         <related_items_node>
             <sys_portal action="INSERT_OR_UPDATE">
@@ -90,7 +90,7 @@
         <sys_class_name>content_page</sys_class_name>
         <sys_created_by>brad.campbell</sys_created_by>
         <sys_created_on>2015-08-11 20:05:06</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>6a6fdf3937750a00b4ca1f7543990e53</sys_id>

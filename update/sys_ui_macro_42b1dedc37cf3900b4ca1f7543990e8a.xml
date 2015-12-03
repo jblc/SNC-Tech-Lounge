@@ -10,7 +10,7 @@
         <sys_class_name>sys_ui_macro</sys_class_name>
         <sys_created_by>brad.campbell</sys_created_by>
         <sys_created_on>2015-03-23 05:42:49</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>42b1dedc37cf3900b4ca1f7543990e8a</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Tech Lounge: Single Layout</sys_name>
