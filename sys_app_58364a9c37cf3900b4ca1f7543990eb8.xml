@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_app">
+    <sys_app action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <licensable>true</licensable>
+        <logo/>
+        <menu/>
+        <name>Tech Lounge Portal</name>
+        <private>false</private>
+        <scope>global</scope>
+        <short_description>Contains the changes needed to deploy the Tech Lounge Portal, used for signing in via the iPad.</short_description>
+        <source>58364a9c37cf3900b4ca1f7543990eb8</source>
+        <store_correlation_id/>
+        <store_url/>
+        <sys_class_name>sys_app</sys_class_name>
+        <sys_code/>
+        <sys_created_by>brad.campbell</sys_created_by>
+        <sys_created_on>2015-03-23 04:52:29</sys_created_on>
+        <sys_id>58364a9c37cf3900b4ca1f7543990eb8</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>brad.campbell</sys_updated_by>
+        <sys_updated_on>2015-09-24 16:43:02</sys_updated_on>
+        <template/>
+        <user_role/>
+        <vendor/>
+        <vendor_prefix/>
+        <version>1.0.1</version>
+    </sys_app>
+</record_update>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="Tech Lounge">3912a3b937750a00b4ca1f7543990e87</application>
+        <assessment/>
+        <content_page display_value="Home">daaa8e9c37cf3900b4ca1f7543990ede</content_page>
+        <device_type/>
+        <filter/>
+        <hint>Tech Lounge Home Screen</hint>
+        <homepage/>
+        <image/>
+        <link_type>CONTENT_PAGE</link_type>
+        <map_page/>
+        <mobile_title>Tech Lounge App Home</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name/>
+        <order/>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <roles/>
+        <survey/>
+        <survey_overwrite>true</survey_overwrite>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>brad.campbell</sys_created_by>
+        <sys_created_on>2015-08-11 20:22:48</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>de53e7f937750a00b4ca1f7543990e99</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Tech Lounge App Home</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Tech Lounge Portal" source="58364a9c37cf3900b4ca1f7543990eb8">58364a9c37cf3900b4ca1f7543990eb8</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Tech Lounge Portal">58364a9c37cf3900b4ca1f7543990eb8</sys_scope>
+        <sys_update_name>sys_app_module_de53e7f937750a00b4ca1f7543990e99</sys_update_name>
+        <sys_updated_by>brad.campbell</sys_updated_by>
+        <sys_updated_on>2015-08-11 20:22:48</sys_updated_on>
+        <timeline_page/>
+        <title>Tech Lounge App Home</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+</record_update>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update node_type="content_page" unload_date="2015-12-03 17:31:39">
+    <sys_portal action="delete_multiple" query="page=6a6fdf3937750a00b4ca1f7543990e53">
+        <related_items_node>
+            <sys_portal action="INSERT_OR_UPDATE">
+                <dropzone>dropzone10</dropzone>
+                <offset>0</offset>
+                <page display_value="Tech Lounge - Login">6a6fdf3937750a00b4ca1f7543990e53</page>
+                <summary/>
+                <sys_created_by>brad.campbell</sys_created_by>
+                <sys_created_on>2015-08-11 20:05:23</sys_created_on>
+                <sys_id>829f9f3937750a00b4ca1f7543990e99</sys_id>
+                <sys_mod_count>0</sys_mod_count>
+                <sys_updated_by>brad.campbell</sys_updated_by>
+                <sys_updated_on>2015-08-11 20:05:23</sys_updated_on>
+                <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>type</name>
+                        <portal_section display_value="Created 2015-08-11 13:05:23">829f9f3937750a00b4ca1f7543990e99</portal_section>
+                        <sys_created_by>brad.campbell</sys_created_by>
+                        <sys_created_on>2015-08-11 20:05:23</sys_created_on>
+                        <sys_id>0a9f9f3937750a00b4ca1f7543990e99</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>brad.campbell</sys_updated_by>
+                        <sys_updated_on>2015-08-11 20:05:23</sys_updated_on>
+                        <value>content_block_programmatic</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>current_page</name>
+                        <portal_section display_value="Created 2015-08-11 13:05:23">829f9f3937750a00b4ca1f7543990e99</portal_section>
+                        <sys_created_by>brad.campbell</sys_created_by>
+                        <sys_created_on>2015-08-11 20:05:23</sys_created_on>
+                        <sys_id>0e9f9f3937750a00b4ca1f7543990e99</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>brad.campbell</sys_updated_by>
+                        <sys_updated_on>2015-08-11 20:05:23</sys_updated_on>
+                        <value>6a6fdf3937750a00b4ca1f7543990e53</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2015-08-11 13:05:23">829f9f3937750a00b4ca1f7543990e99</portal_section>
+                        <sys_created_by>brad.campbell</sys_created_by>
+                        <sys_created_on>2015-08-11 20:05:23</sys_created_on>
+                        <sys_id>869f9f3937750a00b4ca1f7543990e99</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>brad.campbell</sys_updated_by>
+                        <sys_updated_on>2015-08-11 20:05:23</sys_updated_on>
+                        <value>9123ac9e0a0a0bf000b2675a498e6a14</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2015-08-11 13:05:23">829f9f3937750a00b4ca1f7543990e99</portal_section>
+                        <sys_created_by>brad.campbell</sys_created_by>
+                        <sys_created_on>2015-08-11 20:05:23</sys_created_on>
+                        <sys_id>8a9f9f3937750a00b4ca1f7543990e99</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>brad.campbell</sys_updated_by>
+                        <sys_updated_on>2015-08-11 20:05:23</sys_updated_on>
+                        <value>com.glide.cms.RenderBlock</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created 2015-08-11 13:05:23">829f9f3937750a00b4ca1f7543990e99</portal_section>
+                        <sys_created_by>brad.campbell</sys_created_by>
+                        <sys_created_on>2015-08-11 20:05:23</sys_created_on>
+                        <sys_id>c29f9f3937750a00b4ca1f7543990e99</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>brad.campbell</sys_updated_by>
+                        <sys_updated_on>2015-08-11 20:05:23</sys_updated_on>
+                        <value>CMS Clean Login</value>
+                    </sys_portal_preferences>
+                </related_items_node>
+            </sys_portal>
+        </related_items_node>
+    </sys_portal>
+    <content_page action="INSERT_OR_UPDATE">
+        <content_site display_value="Tech Lounge">6b284e9c37cf3900b4ca1f7543990e0f</content_site>
+        <content_theme display_value="">5497c69f080751006f7169ab4fb955ab</content_theme>
+        <description>Basic login page for the Tech Lounge portal.</description>
+        <frame_buster>false</frame_buster>
+        <layout display_value="CMS 1 Column">67f092fa0a0a0b420026133b8feff1c2</layout>
+        <model_id/>
+        <model_table/>
+        <name>Login</name>
+        <order/>
+        <parent_page/>
+        <read_roles/>
+        <roles/>
+        <selectable>true</selectable>
+        <sys_class_name>content_page</sys_class_name>
+        <sys_created_by>brad.campbell</sys_created_by>
+        <sys_created_on>2015-08-11 20:05:06</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6a6fdf3937750a00b4ca1f7543990e53</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Login</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Tech Lounge Portal" source="58364a9c37cf3900b4ca1f7543990eb8">58364a9c37cf3900b4ca1f7543990eb8</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Tech Lounge Portal">58364a9c37cf3900b4ca1f7543990eb8</sys_scope>
+        <sys_update_name>content_page_6a6fdf3937750a00b4ca1f7543990e53</sys_update_name>
+        <sys_updated_by>brad.campbell</sys_updated_by>
+        <sys_updated_on>2015-08-11 20:05:41</sys_updated_on>
+        <title>Tech Lounge - Login</title>
+        <url_suffix>login</url_suffix>
+        <user/>
+        <view/>
+        <workflow_state>published</workflow_state>
+    </content_page>
+</record_update>

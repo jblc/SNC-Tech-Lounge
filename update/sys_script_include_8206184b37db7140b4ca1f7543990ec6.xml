@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>global.TechLoungeHelper</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>TechLoungeHelper</name>
+        <script><![CDATA[var TechLoungeHelper = Class.create();
+TechLoungeHelper.incidentTypeMap = {
+	broken_button:  { category: 'IT Business Services', subCategory: 'Other', desc: 'Something is broken'},
+	request_button: { category: 'IT Supplies Requests', subCategory: 'Other', desc: 'I have a request'},
+	other_button:   { category: 'IT Business Services', subCategory: 'Other', desc: 'Other - Not Specified'}
+};
+TechLoungeHelper.prototype = Object.extendsObject(AbstractAjaxProcessor, {
+	
+	_initialize : function() {
+	},
+	
+	processSignIn : function() {
+		
+		if(!gs.getUser().hasRole('tech_lounge_guest')){
+			return 'demo';
+		}
+		
+		var result = this.newItem("result");
+		
+		var callerId = this.getParameter('sysparm_caller');
+		var locationSysId = this.getParameter('sysparm_location');
+		var helpType = this.getParameter('sysparm_help_type');
+		
+		try{
+			var incidentNumber = this._createIncident(callerId,locationSysId,helpType);
+			
+			result.setAttribute("success", "true");
+			result.setAttribute("incidentNumber", incidentNumber);
+		}
+		catch(e){
+			result.setAttribute("success", "false");
+		}
+	},
+	
+	_createIncident: function(callerId,locationId,helpType){
+		var incidentDetails = TechLoungeHelper.incidentTypeMap[helpType];
+		var newIncident = new GlideRecord('incident');
+		newIncident.contact_type = "tech_lounge";
+		newIncident.caller_id = callerId;
+		newIncident.location = locationId;
+		newIncident.impact = 3;
+		newIncident.urgency = 3;
+		newIncident.short_description = "Tech Lounge: " + incidentDetails.desc;
+		newIncident.description = 'Placeholder from the tech lounge!';
+		newIncident.category = incidentDetails.category;
+		newIncident.subcategory = incidentDetails.subCategory;
+		newIncident.insert();
+		return newIncident.number+'';
+		
+	},
+	
+	type: 'TechLoungeHelper'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>brad.campbell</sys_created_by>
+        <sys_created_on>2015-04-12 20:00:10</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>8206184b37db7140b4ca1f7543990ec6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>TechLoungeHelper</sys_name>
+        <sys_package display_value="Tech Lounge Portal" source="58364a9c37cf3900b4ca1f7543990eb8">58364a9c37cf3900b4ca1f7543990eb8</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Tech Lounge Portal">58364a9c37cf3900b4ca1f7543990eb8</sys_scope>
+        <sys_update_name>sys_script_include_8206184b37db7140b4ca1f7543990ec6</sys_update_name>
+        <sys_updated_by>brad.campbell</sys_updated_by>
+        <sys_updated_on>2015-04-27 18:31:01</sys_updated_on>
+    </sys_script_include>
+</record_update>

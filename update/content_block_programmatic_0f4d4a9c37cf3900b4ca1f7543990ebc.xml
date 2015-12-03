@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="content_block_programmatic">
+    <content_block_programmatic action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <condition/>
+        <conditional>false</conditional>
+        <frame/>
+        <logged_on>false</logged_on>
+        <name>TechLounge: Main Footer</name>
+        <programmatic_content><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	<div class="powered_by">Powered by <img width="250px" height="30.93px" src="powered_by_service_now.png"/></div>
+</j:jelly>]]></programmatic_content>
+        <sys_class_name>content_block_programmatic</sys_class_name>
+        <sys_created_by>brad.campbell</sys_created_by>
+        <sys_created_on>2015-03-23 05:22:16</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>0f4d4a9c37cf3900b4ca1f7543990ebc</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>TechLounge: Main Footer</sys_name>
+        <sys_package display_value="" source="NULL">8353db43d8330200946be90404988296</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Tech Lounge Portal">58364a9c37cf3900b4ca1f7543990eb8</sys_scope>
+        <sys_update_name>content_block_programmatic_0f4d4a9c37cf3900b4ca1f7543990ebc</sys_update_name>
+        <sys_updated_by>brad.campbell</sys_updated_by>
+        <sys_updated_on>2015-09-23 20:34:14</sys_updated_on>
+        <two_phase>true</two_phase>
+    </content_block_programmatic>
+</record_update>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="content_block_programmatic">
+    <content_block_programmatic action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <condition/>
+        <conditional>false</conditional>
+        <frame/>
+        <logged_on>false</logged_on>
+        <name>TechLounge: Home</name>
+        <programmatic_content><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide"
+	xmlns:j2="null" xmlns:g2="null">
+<g:evaluate>
+    var defaultLocation = gs.getUser().getLocation();
+  </g:evaluate>
+	<div class="header_containter">
+		<img src="/tech_lounge_header_logo.jpgx" />
+	</div>
+	<div class="tl_title_containter">
+		<div>
+			<h1 class="tl_title">Sign In</h1>
+		</div>
+	</div>  
+	<div id="container">
+		<div class="panel">
+				<section id="content">
+					<form id="signinform" class="">
+						<div id="employee_picker_container">
+							<g:ui_reference id="employee_picker" name="employee_picker"
+								query="active=true" table="sys_user" value="" displayValue=""
+								columns="name" columns_search="true" order_by="name"
+								show_popup="false" completer="AJAXTableCompleter" />
+						</div>
+					</form>
+
+					<div class="button_holder">
+						<a id="broken_button" class="color_1" href="#" style="margin-top: 10px;">
+						Something is Broken
+						</a> <a id="request_button" class="color_2"
+							href="#">I Have a
+							Request</a> <a id="other_button" class="color_3"
+							href="#">Other</a>
+					</div>
+				</section>
+		</div>
+	</div>
+     <div class="powered_by">Powered by <img width="250px" height="30.93px" src="powered_by_service_now.pngx"/></div>
+<div id="openModal" class="modalDialog hidden">
+	<div>
+		<h2 style="color: #7a9a01; margin-bottom: 10px">Thank you!</h2>
+		<p>Thanks for signing in.</p>
+		<p>A technician will be with you shortly.</p>
+		<a id="modal_button" class="color_1"  style="width: 100px; margin:10px; height: 10px; font-size:20px; padding: 2px;margin-top:10px;" href="#">Close</a>		
+	</div>
+</div>
+	<script type="text/javascript">
+		// Add handlers to display the content for the selected tab
+		gel("sys_display.employee_picker").placeholder = 'Your Name';
+		gel('lookup.employee_picker').addClassName('hidden');
+		$('broken_button').observe("touchstart", handleSignIn).observe('click', handleSignIn);
+		$('request_button').observe("touchstart", handleSignIn).observe('click', handleSignIn);
+		$('other_button').observe("touchstart", handleSignIn).observe('click', handleSignIn);
+		$('modal_button').observe("touchstart", handleModalClose).observe('click', handleModalClose);
+		
+		function handleSignIn(e) {
+			signIn(this.id);
+			e.preventDefault();
+			e.stopPropagation();
+		}
+		
+		function handleModalClose(e){
+			hideDialog();
+			e.preventDefault();
+			e.stopPropagation();	
+		}
+
+		function validateForm() {
+			var errorMessage = "";
+			if ($('employee_picker').getValue() == '') {
+				if (errorMessage != "") {
+					errorMessage += "\n\n";
+				}
+				errorMessage += "You must enter a valid name before you can sign in.";
+			}
+
+			if (errorMessage == "") {
+				return true;
+			}
+
+			alert(errorMessage);
+			return false;
+		}
+
+		function signIn(helpType) {
+			if (!validateForm()) {
+				return false;
+			}
+			var ga = new GlideAjax('TechLoungeHelper');
+			ga.addParam('sysparm_location', '${defaultLocation}');
+			ga.addParam('sysparm_name', 'processSignIn');
+			ga.addParam('sysparm_caller', $('employee_picker').getValue());
+			ga.addParam('sysparm_help_type', helpType);
+			ga.getXML(SignInParse);
+
+    		$('openModal').removeClassName('hidden');
+
+			setTimeout(hideDialog, 10000);
+		}
+
+		function SignInParse(answer) {
+			var result = getSignInResponseDetails(answer);
+			if (!result.success) {
+				alert('An error occurred. Please reach out to an associate for help.');
+				return false;
+			}
+
+			//$('incidentNumber').update(result.incidentNumber);
+
+		}
+
+		function getSignInResponseDetails(answer) {
+			var details = {};
+			details.success = false;
+			details.incidentNumber = 0;
+
+			try {
+				var result = answer.responseXML.getElementsByTagName("result")[0];
+				if (result.getAttribute("success") == 'false') {
+					throw ('bad response from server');
+				}
+
+				details.success = true;
+				details.incidentNumber = result.getAttribute("incidentNumber");
+			} catch (e) {
+				details.success = false;
+			}
+
+			return details;
+		}
+
+		function hideDialog() {
+			$('signinform').reset();
+			$('employee_picker').clear();
+			$('openModal').addClassName('hidden');
+		}
+
+		function setFocus() {
+			$('sys_display.employee_picker').focus();
+		}
+
+		addLoadEvent(setFocus);
+	</script>
+
+</j:jelly>]]></programmatic_content>
+        <sys_class_name>content_block_programmatic</sys_class_name>
+        <sys_created_by>brad.campbell</sys_created_by>
+        <sys_created_on>2015-03-23 05:10:25</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>7d7ace9c37cf3900b4ca1f7543990eee</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>TechLounge: Home</sys_name>
+        <sys_package display_value="" source="NULL">8353db43d8330200946be90404988296</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Tech Lounge Portal">58364a9c37cf3900b4ca1f7543990eb8</sys_scope>
+        <sys_update_name>content_block_programmatic_7d7ace9c37cf3900b4ca1f7543990eee</sys_update_name>
+        <sys_updated_by>brad.campbell</sys_updated_by>
+        <sys_updated_on>2015-09-24 16:40:21</sys_updated_on>
+        <two_phase>true</two_phase>
+    </content_block_programmatic>
+</record_update>

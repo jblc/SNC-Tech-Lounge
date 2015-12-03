@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="content_block_programmatic">
+    <content_block_programmatic action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <condition/>
+        <conditional>false</conditional>
+        <frame/>
+        <logged_on>false</logged_on>
+        <name>Tech Lounge: Queue</name>
+        <programmatic_content><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+<g:evaluate>
+	var refreshInterval = gs.getProperty('snc.surf.techlounge.queue.refresh',120000);
+    var defaultLocationSysId = gs.getUser().getLocation();
+	var locationDisplayName = "";
+	if(!JSUtil.isNil(defaultLocationSysId)){
+		var locationGR = new GlideRecord('cmn_location');
+		locationGR.get(defaultLocationSysId);
+		locationDisplayName = locationGR.city + '';
+	}
+	
+	var incidents = new GlideRecord('incident');
+	incidents.addQuery('contact_type','tech_lounge');
+	incidents.addQuery('state',1);
+	incidents.addQuery('location',defaultLocationSysId);
+	incidents.orderBy('sys_created_on');
+
+	incidents.query();
+</g:evaluate>	
+	<div class="header_containter">
+		<img src="/tech_lounge_header_logo.jpgx" />
+	</div>
+	<div class="tl_title_containter">
+		<div>
+			<h1 class="tl_title">Queue - ${locationDisplayName}</h1>
+		</div>
+	</div>
+ <div style="text-align: center; width: 100%;margin-top: 50px;">	
+	 <table class="queue_table">
+		 <tr>
+			 <th style="width: 10%">Position</th>
+			 <th style="Width: 90%">Guest</th>
+		 </tr>
+<j:while test="${incidents.next()}">
+	<j:set var="jvar_rowCounter" value="${jvar_rowCounter + 1}" />	
+	 <tr>
+		 <td>${jvar_rowCounter}</td>
+		 <td>${incidents.caller_id.getDisplayValue()}</td>
+	</tr>
+		 </j:while> 
+	 </table>
+</div>
+<script>
+setTimeout(function(){
+   window.location.reload(1);
+}, ${refreshInterval});	
+	</script>
+</j:jelly>]]></programmatic_content>
+        <sys_class_name>content_block_programmatic</sys_class_name>
+        <sys_created_by>brad.campbell</sys_created_by>
+        <sys_created_on>2015-08-12 16:50:55</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>748cb38e37714a00b4ca1f7543990e0d</sys_id>
+        <sys_mod_count>36</sys_mod_count>
+        <sys_name>Tech Lounge: Queue</sys_name>
+        <sys_package display_value="" source="NULL">8353db43d8330200946be90404988296</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Tech Lounge Portal">58364a9c37cf3900b4ca1f7543990eb8</sys_scope>
+        <sys_update_name>content_block_programmatic_748cb38e37714a00b4ca1f7543990e0d</sys_update_name>
+        <sys_updated_by>brad.campbell</sys_updated_by>
+        <sys_updated_on>2015-09-22 22:29:11</sys_updated_on>
+        <two_phase>false</two_phase>
+    </content_block_programmatic>
+</record_update>
